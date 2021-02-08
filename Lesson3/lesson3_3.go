@@ -32,4 +32,23 @@ func main() {
 	
 	// 配列の要素数を調べる
 	fmt.Println(len(arrStr))
+
+	// interface & nil（初期値）
+	// すべて型を汎用的に表す
+	var x interface{}
+	fmt.Println(x)
+
+	x = "Hello Golang"
+	fmt.Println(x)
+
+	x = 3.2
+	fmt.Println(x)
+
+	x = [3]int{1,2,3}
+	fmt.Println(x)
+
+	// 演算での計算は不可（mismatched types interface {} and int）
+	x = 3
+	// fmt.Println(x + 2)
+
 }
