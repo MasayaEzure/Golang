@@ -20,15 +20,18 @@ func OtherUpdateUser(user *User) {
 	user.Age = 100
 }
 
-func (user User) sayName() {
-	fmt.Println(user.Name)
+func (u User) sayName() {
+	fmt.Println(u.Name, "from sayName")
+}
+
+func (u *User) SetName(name string) {
+	u.Name = name
 }
 
 func main() {
 	// 明示的な変数定義
-	var user1 User
+	var user1 &User
 	// フィールドの更新
-	user1.Name = "Taro"
 	user1.Age = 25
 
 	fmt.Println(user1)
@@ -42,6 +45,14 @@ func main() {
 
 	// 初期値を予め設定した場合の宣言
 	user3 := User{"Saburo", 50}
+
+	// メソッドの呼び出し
+	user3.SetName("aaa") 
+	user3.sayName()
+
+	user := &User{Name: "waooo"}
+	user.SetName("yeaaa")
+	user.sayName()
 
 	fmt.Println(user3)
 
