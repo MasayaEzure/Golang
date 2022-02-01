@@ -30,7 +30,7 @@ func (u *User) SetName(name string) {
 
 func main() {
 	// 明示的な変数定義
-	var user1 &User
+	var user1 User
 	// フィールドの更新
 	user1.Age = 25
 
