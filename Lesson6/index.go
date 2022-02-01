@@ -8,7 +8,6 @@ type T struct {
 	フィールド名 型名
 	型名を省略することができる
 	*/
-	// User User
 	User
 }
 
@@ -24,7 +23,7 @@ func (u *User) SetName() {
 	u.Name = "QWE"
 }
 
-// コンストラクタ型関数
+// コンストラクタ型の関数
 func NewUser(name string, age int) *User {
 	return &User{Name: name, Age: age}
 }
