@@ -44,6 +44,15 @@ func RaiseError() error {
 	}
 }
 
+type Point struct {
+	a int
+	b string
+}
+
+func (p *Point) String() string {
+	return fmt.Sprintf("<<%v, %v>>", p.a, p.b)
+}
+
 func main() {
 	/*
 	i := []Stringpy {
@@ -54,14 +63,17 @@ func main() {
 	for _, v := range i {
 		fmt.Println(v.ToString())
 	}
-	*/
-
+	
 	err := RaiseError()
 	fmt.Println(err.Error())
-
+	
 	e, ok := err.(*ExceptionError)
 	if ok {
 		fmt.Println(e.ErrCode)
 	}
+	*/
+
+	p := &Point{10, "ABC"}
+	fmt.Println(p)
 
 }
