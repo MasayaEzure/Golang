@@ -1,12 +1,12 @@
-package sample
+package main
 
-// 定数
 const (
+	// 参照可能（public）
 	Max = 100
-	min = 1	
+	// 参照不可（private）
+	min = 1
 )
 
 func ReturnMin() int {
 	return min
 }
-
