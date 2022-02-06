@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	/*
 	// 文字列の結合
 	a := strings.Join([]string{"a","b","c"}, ",")
 	b := strings.Join([]string{"a","b","c"}, "")
@@ -70,7 +69,6 @@ func main() {
 	// 全角
 	x := strings.TrimSpace("　　　　bbb　　")
 	fmt.Println(w, x)
-	*/
 
 	// 文字列からスペースで区切られれたフィールドの取り出し
 	y := strings.Fields("a b c d")
