@@ -9,8 +9,6 @@ import (
 // log
 
 func main(){
-
-	/*
 	// ログの出力先を変更
 	log.SetOutput(os.Stdout)
 	
@@ -54,7 +52,6 @@ func main(){
 	// ログのプリフィックスを設定
 	log.SetPrefix("[log]")
 	log.Println("dddd")
-	*/
 
 	// ロガーの生成
 	logger := log.New(os.Stdout, "", log.Ldate | log.Ltime | log.Lshortfile)
