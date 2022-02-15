@@ -15,7 +15,6 @@ type Account struct {
 }
 
 func main() {
-	/*
 	// ヘッダー、クエリの追加
 	// Parse：正しいURLなのかを確認する
 	base, _ := url.Parse("http://example.com/")
@@ -52,7 +51,6 @@ func main() {
 	// 読み込み
 	body, _ := ioutil.ReadAll(resp.Body)
 	fmt.Println(body)
-	*/
 
 	// Post
 	base2, _ := url.Parse("https://example.com/")

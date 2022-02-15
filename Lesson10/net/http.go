@@ -12,7 +12,6 @@ import (
 // クライアント
 
 func main() {
-	/*
 	// GETメソッド
 	res, _ := http.Get("https://example.com")
 	fmt.Println(res.StatusCode)
@@ -27,7 +26,6 @@ func main() {
 	defer res.Body.Close()
 	b, _ := ioutil.ReadAll(res.Body)
 	fmt.Println(string(b))
-	*/
 
 	// POSTメソッド
 	v := url.Values{}
