@@ -19,19 +19,17 @@ const (
 	A = 1
 	B
 	C = "aaa"
-	// itoa：連続する整数の連番を生成
+	// 連続する整数の連番を生成
 	D = iota
 	E
 	F
 )
 
-// 返り値が一つの関数
 func Sum (x, y int) int {
 	result := x + y
 	return result
 }
 
-// 返り値が複数の関数
 func Div (x,y int) (int, int, int) {
 	a := x * y
 	b := x / y
@@ -39,32 +37,26 @@ func Div (x,y int) (int, int, int) {
 	return a, b, c
 }
 
-// 返り値に変数を定義する関数
 func Result (price int) (sum int) {
 	sum = price * 2
-	// 変数 sum を返す
 	return
 }
 
-// 返り値がない関数
 func Noreturn () {
 	fmt.Println("aaa")
 	return
 }
 
-// 関数を返す関数
 func ReturnFunc () func() {
 	return func() {
 		fmt.Println("ReturnFunc")
 	}
 }
 
-// 関数を引数に取る関数
 func CallFunc (f func()) {
 	f()
 }
 
-// クロージャー
 func Closure() func(string) string {
 	var store string
 	return func(next string) string {
@@ -74,7 +66,6 @@ func Closure() func(string) string {
 	}
 }
 
-// ジェネレーター
 func Gene() func() int {
 	i := 0
 	return func() int {
@@ -83,14 +74,12 @@ func Gene() func() int {
 	}
 }
 
-
 func main () {
 	fmt.Println(URL, Name, Version)
-	// 値の上書き
+
 	fmt.Println(A,B,C)
 	fmt.Println(D,E,F)
 
-	// 関数の呼び出し
 	res := Sum(10, 100)
 	fmt.Println(res)
 
@@ -113,16 +102,13 @@ func main () {
 
 	fmt.Println(f)
 
-	// 関数の呼び出し
 	r := ReturnFunc()
 	r()
 
-	// 関数の実行
 	CallFunc(func() {
 		fmt.Println("CallFunc")
 	})
 
-	// クロージャーの実行
 	c := Closure()
 	fmt.Println(c("aaaa"))
 	fmt.Println(c("bbb"))
@@ -133,5 +119,4 @@ func main () {
 	fmt.Println(g())
 	fmt.Println(g())
 	fmt.Println(g())
-	
 }
