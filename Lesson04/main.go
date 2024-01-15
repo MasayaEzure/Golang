@@ -17,7 +17,6 @@ func main() {
 	var score int = 100
 	var message string = ""
 
-	// 条件分岐
 	if s >= score {
 		message = "Success!"
 	} else if s >= 80 {
@@ -30,14 +29,12 @@ func main() {
 
 	var number string = "aaa"
 	i, err := strconv.Atoi(number)
-	// エラーハンドリング
 	if err != nil {
 		fmt.Println(err)
 	}
 
 	fmt.Printf("%T\n", i)
 
-	// for文
 	i := 0
 	for {
 		i++
@@ -49,8 +46,7 @@ func main() {
 		fmt.Println(i)
 	}
 
-	// 条件付きのfor文
-
+	// 条件付きfor文
 	for i < 10 {
 		fmt.Println(i)
 		i++
@@ -72,7 +68,6 @@ func main() {
 		fmt.Println(i, v)
 	}
 
-	// Map
 	m := map[string]int{
 		"aaa": 10,
 		"bbb": 20,

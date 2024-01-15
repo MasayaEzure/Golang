@@ -29,7 +29,6 @@ func sample(a interface{}) {
 }
 
 func Test() {
-	// Test関数が終了したときに実行される
 	defer fmt.Println("-- END --")
 	fmt.Println("-- START --")
 }
@@ -48,7 +47,6 @@ func Sub() {
 }
 
 func main() {
-	// switch文
 	switch n := 2; n {
 	case 1:
 		fmt.Println("1")
@@ -65,7 +63,6 @@ func main() {
 	sample(3.1)
 	sample(true)
 
-	// ラベル付きのFor文
 	Loop:
 	for {
 		for {
@@ -97,7 +94,7 @@ func main() {
 
 	f.Write([]byte("Hello"))
 
-	// 例外処理（あまり使用されない）
+	// 例外処理（あまり使わない）
 	defer func() {
 		// recover：panicによって発生したエラーから復帰するための処理
 		if x := recover(); x != nil {
@@ -121,11 +118,7 @@ func main() {
 
 }
 
-/*
-init
-メイン関数より先に実行される特別な関数
-複数定義も可能だが、あまり望ましくない
-*/
+// メイン関数より先に実行される
 func init() {
 	fmt.Println("This is init")
 }
