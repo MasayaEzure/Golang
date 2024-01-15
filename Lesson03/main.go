@@ -4,11 +4,8 @@ import (
 	"fmt"
 )
 
-/*
-定数
-基本は関数外に記述する
-頭文字を大文字にすると、他のパッケージからも呼び出し可能
-*/
+// 定数
+// 頭文字を大文字にすると、他のパッケージからも呼び出し可能
 const  (
 	URL = "https://xxx.co.jp"
 	Name = "aaaaaa"
@@ -86,15 +83,13 @@ func main () {
 	res2, res3, res4 := Div(10, 3)
 	fmt.Println(res2, res3, res4)
 
-	// _ で関数の返り値を破棄することができる
-	res4, res5, _ := Div(20, 6)
+	res4, res5, _ := Div(20, 6)  // _ で関数の返り値を破棄する
 	fmt.Println(res4, res5)
 
 	fmt.Println(Result(300))
 
 	Noreturn()
 
-	// 無名関数
 	f := func (a, b, c int) int {
 		result := a + b + c
 		return result
