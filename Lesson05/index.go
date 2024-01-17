@@ -6,11 +6,7 @@ import (
 )
 
 func main() {
-	/*
-		map
-		明示的な宣言
-		var map名 = map[型]型{値}
-	*/
+	// map（明示的な宣言）
 
 	var m = map[string]int{
 		"aaa": 1,
@@ -19,13 +15,11 @@ func main() {
 	}
 
 	fmt.Println(m)
-	// 値の取り出し
 	fmt.Println(m["aaa"])
 	fmt.Println(m["bbb"])
 	fmt.Println(m["ccc"])
 
 	n := make(map[int]string)
-	// 値を代入
 	n[0] = "naaa"
 	n[1] = "nbbb"
 	n[2] = "nccc"
@@ -35,24 +29,17 @@ func main() {
 	fmt.Println(n[1])
 	fmt.Println(n[2])
 
-	// エラーハンドリング
 	i, ok := n[3]
 	if !ok {
 		fmt.Println("Not found")
 	}
 	fmt.Println(i, ok)
 
-	/*
-		delete
-		第一引数：削除したいmap、第2引数：キー
-	*/
-	delete(n, 0)
+	delete(n, 0)  // 削除対象のmap、キー
 	fmt.Println(n)
 
-	// len関数
 	fmt.Println(len(n))
 
-	// for文
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
@@ -130,7 +117,6 @@ func main() {
 
 	close(cl)
 
-	// for文
 	for a := range cl {
 		fmt.Println(a)
 	}
