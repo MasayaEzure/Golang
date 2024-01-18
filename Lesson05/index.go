@@ -57,8 +57,7 @@ func main() {
 	c := make(chan int)
 	fmt.Println(cap(c))
 
-	// 第2引数に容量を指定
-	d := make(chan int, 10)
+	d := make(chan int, 10)　// 第2引数：容量を指定
 	fmt.Println(cap(d))
 
 	// データを送信
@@ -171,7 +170,7 @@ func main() {
 	}
 }
 
-// チャンネルにデータが送信されたら実行される関数
+// チャンネルにデータが送信されたら実行される
 func Reciever(c chan int) {
 	for {
 		i := <-c

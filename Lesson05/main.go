@@ -2,7 +2,6 @@ package main
 
 import "fmt"
 
-// 可変長引数をもつ関数
 func Sum(s ... int) int {
 	n := 0
 	for _, v := range s {
@@ -12,7 +11,8 @@ func Sum(s ... int) int {
 }
 
 func main() {
-	// スライスの明示的な宣言
+	// スライス
+	// 明示的な宣言
 	var sl [] int = []int {1, 2, 3, 4}
 
 	fmt.Println(sl)
@@ -50,22 +50,17 @@ func main() {
 	sl = append(sl, 5, 6, 7)
 	fmt.Println(sl)
 
-	// len
 	fmt.Println(len(sl))
 
-	// 第2引数：要素数、第3引数：容量
-	sample := make([]int, 3, 10)
+	sample := make([]int, 3, 10) // 要素数、容量
 	// cap (容量を出力)
 	fmt.Println(cap(sample))
 
 	slc := make([]int, 4, 10)
 	fmt.Println(slc)
 
-	/*
-	copy関数
-	第一引数：コピー先、第2引数：コピー元
-	*/
-	n := copy(slc, sl)
+	// copy関数
+	n := copy(slc, sl) // コピー先、コピー元
 	fmt.Println(n, slc)
 
 	str := []string{
@@ -76,7 +71,6 @@ func main() {
 
 	fmt.Println(str)
 	
-	// for文
 	for i, v := range str {
 		fmt.Println(i, v)
 	}

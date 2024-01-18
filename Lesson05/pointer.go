@@ -25,7 +25,6 @@ func main() {
 
 	/*
 		ポインタ
-		宣言
 		var ポインタ名 *型 = &変数名
 	*/
 	var p *int = &n
@@ -34,7 +33,6 @@ func main() {
 	// 値を出力
 	fmt.Println(*p)
 
-	// 値の更新
 	*p = 30
 	fmt.Println(n)
 
