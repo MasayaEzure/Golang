@@ -24,7 +24,7 @@ func main() {
 	sl2 := []int {10, 20, 30, 40}
 	fmt.Println(sl2)
 
-	// make関数（スライスを生成）　
+	// スライスを生成
 	aaa := make([]string, 5)
 	aaa[0] = "hello"
 	aaa[1] = "good morning"
@@ -37,14 +37,13 @@ func main() {
 	
 	aaa[4] = "good night"
 	
-	// インデックス番号の範囲を指定して出力（3の手前まで）
+	// インデックス番号の範囲を指定
 	fmt.Println(aaa[:3])
 	// 配列の一番最後の要素を出力
 	fmt.Println(aaa[len(aaa) - 1])
 
 	/*
 	append
-	要素を追加する
 	第2引数に要素を複数渡すことができる
 	*/
 	sl = append(sl, 5, 6, 7)

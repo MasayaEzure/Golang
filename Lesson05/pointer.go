@@ -23,14 +23,11 @@ func main() {
 	// メモリ上のアドレスを表示
 	fmt.Println(&n)
 
-	/*
-		ポインタ
-		var ポインタ名 *型 = &変数名
-	*/
-	var p *int = &n
-	// アドレスを出力
+	// ポインタ
+	var p *int = &n  // &n は変数名
+	// アドレス
 	fmt.Println(p)
-	// 値を出力
+	// 値
 	fmt.Println(*p)
 
 	*p = 30

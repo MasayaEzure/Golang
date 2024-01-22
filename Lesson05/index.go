@@ -7,7 +7,6 @@ import (
 
 func main() {
 	// map（明示的な宣言）
-
 	var m = map[string]int{
 		"aaa": 1,
 		"bbb": 2,
@@ -47,8 +46,7 @@ func main() {
 	/*
 		チャンネル
 		複数の goroutine 間でのデータの受け渡しするために設計された構造
-		宣言
-		var チャンネル名 chan 型
+	
 		受信専用のチャンネル宣言
 		var チャンネル名 <-chan 型
 		送信専用のチャンネル宣言
